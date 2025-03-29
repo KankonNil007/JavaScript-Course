@@ -1,0 +1,17 @@
+.b1 {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.b2 {
+    background-color: yellow;
+    color: black;
+    border: none;
+}
