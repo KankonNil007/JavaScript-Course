@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function convertDistance(distance, from, to) {
+            let convertedDistance = '';
+
+            if (from === 'miles' && to === 'km') {
+                convertedDistance = distance * 1.6;
+            } else if (from === 'km' && to === 'miles') {
+                convertedDistance = distance / 1.6;
+            } else if (from === to) {
+                convertedDistance = distance;
+            }
+
+            return `${convertedDistance} ${to}`;
+        }
+
+        console.log(convertDistance(50, 'miles', 'km'))
+        console.log(convertDistance(32, 'km', 'miles'));
+        console.log(convertDistance(50, 'km', 'km'));
+    </script>
+</body>
+</html>
