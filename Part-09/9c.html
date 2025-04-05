@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="b1" onclick="buttonClick('Heads');">
+        Heads
+    </button>
+
+    <button class="b2" onclick="buttonClick('Tails');">
+        Tails
+    </button>
+
+    <p class="p1"></p>
+
+    <script>
+        function buttonClick(clickedButton) {
+            if (clickedButton === 'Heads') {
+                document.querySelector('.p1').innerHTML = `You chose: ${clickedButton}`;
+            } else if (clickedButton === 'Tails') {
+                document.querySelector('.p1').innerHTML = `You chose: ${clickedButton}`;
+            }
+        }
+    </script>
+</body>
+</html>
