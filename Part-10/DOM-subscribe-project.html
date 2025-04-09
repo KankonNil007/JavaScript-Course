@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/DOM-subscribe-button.css">
+    <title>DOM Projects</title>
+</head>
+<body>
+
+    <p>
+        YouTube Subscribe Button
+    </p>
+
+    <button class="b1" onclick="
+        subscribeButton();
+    ">
+        Subscribe
+    </button>
+
+    <script>
+        function subscribeButton() {
+            let buttonElement = document.querySelector('.b1');
+
+            if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerText = 'Subscribed';
+                buttonElement.classList.add('activeButton');
+            } else if(buttonElement.innerText === 'Subscribed') {
+                buttonElement.innerText = 'Subscribe';
+                buttonElement.classList.remove('activeButton');
+            }
+        }
+    </script>
+</body>
+</html>

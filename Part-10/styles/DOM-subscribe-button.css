@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.b1 {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+.activeButton {
+    background-color: #F0F0F0;
+    color: black;
+}

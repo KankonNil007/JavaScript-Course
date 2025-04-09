@@ -1,0 +1,10 @@
+.b1 {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 216, 20);
+    color: black;
+    padding: 8px 50px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
