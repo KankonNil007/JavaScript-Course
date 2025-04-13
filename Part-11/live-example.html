@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    const myArray1 = [10, 20, 30];
+    console.log(myArray1);
+
+    console.log(myArray1[0]);
+    console.log(myArray1[1]);
+
+    myArray1[2] = 99;
+    console.log(myArray1);
+
+    console.log(typeof myArray1);
+    console.log(Array.isArray(myArray1));
+
+    const myArray2 = [6, 'hello', true, {name: 'socks', price: 22}, [1, 2]];
+
+    console.log(myArray1.length);
+
+    myArray1.push(100);
+    console.log(myArray1);
+
+    myArray1.splice(0, 1);
+    console.log(myArray1);
+
+    // Loops
+
+    // while Loop
+    let i = 1;
+
+    while (i <= 5) {
+        console.log(i);
+        i++;
+    }
+
+    // For Loop
+
+    for (let i = 1; i <= 5; i++) {
+        console.log(i); 
+    }
+
+    // Standard Loop = For Loop
+    // Non-standard Loop = While Loop
+
+    // Example of non-standard Loop
+
+    let randomNumber = 0;
+
+    while (randomNumber < 0.5) {
+        randomNumber = Math.random();
+    }
+
+    console.log(randomNumber);
+
+    // Looping through an Array
+
+    const myArray3 = ['make dinner', 'wash dishes', 'watch youtube'];
+
+    for (let i = 0; i < myArray3.length; i++) {
+        const element = myArray3[i];
+        console.log(element);
+    }
+
+    // Accumulator Pattern
+
+    const myArray4 = [1, 1, 4];
+    let total = 0;
+
+    for (let i = 0; i < myArray4.length; i++) {
+        const element2 = myArray4[i];
+        total = total + element2;
+    }
+
+    console.log(total);
+
+    const myArray5 = [];
+
+    for (let i = 0; i < myArray4.length; i++) {
+        const element = myArray4[i];
+        myArray5.push(element * 2);
+    }
+    console.log(myArray5);
+</script>
+</html>

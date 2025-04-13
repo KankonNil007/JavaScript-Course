@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countPositive(nums) {
+            let total = 0;
+
+            for (let i = 0; i < nums.length; i++) {
+                const element = nums[i];
+
+                if (element > 0) {
+                    total = total + 1;
+                }
+            }
+
+            console.log(total);
+        };
+
+        countPositive([1, -3, 5]);
+        countPositive([-2, 3, -5, 7, 10]);
+    </script>
+</body>
+</html>
