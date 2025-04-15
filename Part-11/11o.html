@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findNemo(array) {
+            let indexed = '';
+            for (let i = 0; i < array.length; i++) {
+                const element = array[i];
+                if (element === 'search') {
+                    indexed = String(array.indexOf('search'));
+                    break;
+                } else {
+                    indexed = '-1';
+                }
+            }
+
+            console.log(indexed);
+        };
+
+        findNemo(['hello', 'world', 'search', 'good', 'search5']);
+        findNemo(['not', 'found']);
+    </script>
+</body>
+</html>

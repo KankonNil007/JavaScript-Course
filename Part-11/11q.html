@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findIndex(array, word) {
+            let indexed = '';
+
+            for (let i = 0; i < array.length; i++) {
+                const element = array[i];
+                
+                if (element === word) {
+                    indexed = String(array.indexOf(word));
+                    break;
+                } else {
+                    indexed = '-1';
+                }
+            }
+
+            console.log(indexed);
+        }
+
+        findIndex(['green', 'red', 'blue', 'red'], 'red');
+        findIndex(['green', 'red', 'blue', 'red'], 'yellow');
+    </script>
+</body>
+</html>
