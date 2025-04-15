@@ -7,21 +7,37 @@
 </head>
 <body>
     <script>
-        function unique(array) {
-            let newArray = [];
-            let removeDupes = 0;
+        function findIndex(array, word) {
 
             for (let i = 0; i < array.length; i++) {
                 const element = array[i];
-                if (element === element && removeDupes < 1) {
-                    removeDupes++;
-                } else {
-                    newArray.push(element);
+                
+                if (element === word) {
+                    return i;
+                }
+
+            }
+                    
+            return -1;
+
+        }
+
+        function unique(array) {
+            const result = [];
+
+            for (let i = 0; i < array.length; i++) {
+                const element = array[i];
+                
+                if (findIndex(result, element) === -1) {
+                    result.push(element);
                 }
             }
 
-            console.log(newArray);
-        }
+            console.log(result);
+        };
+
+        console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+        console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
 
         unique(['green', 'red', 'blue', 'red']);
         unique(['red', 'green', 'green', 'red']);
