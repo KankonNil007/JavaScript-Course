@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="b1" onclick="clickButton();">
+        Add to cart
+    </button>
+
+    <p class="p1"> </p>
+
+    <script>
+        function clickButton() {
+            const textInside = document.querySelector('.p1');
+
+            textInside.innerHTML = 'Added';
+
+            setTimeout(function() {
+                textInside.innerHTML = '';
+            }, 2000);
+        };
+    </script>
+</body>
+</html>
