@@ -27,9 +27,11 @@ function autoPlay() {
             playGame(playerMove);
         }, 1000);
         isAutoPlaying = true;
+        document.querySelector('.b77').innerText = 'Stop Playing';
     } else {
         clearInterval(intervalId);
         isAutoPlaying = false;
+        document.querySelector('.b77').innerText = 'Auto Play';
     }
 
 
@@ -45,16 +47,6 @@ document.querySelector('.paper-btn').addEventListener('click',() => {
 
 document.querySelector('.scissors-btn').addEventListener('click',() => {
     playGame('Scissors');
-});
-
-document.body.addEventListener('keydown', (event) => {
-    if (event.key === 'r') {
-        playGame('Rock');
-    } else if (event.key === 'p') {
-        playGame('Paper');
-    } else if (event.key === 's') {
-        playGame('Scissors');
-    }
 });
 
 
@@ -127,14 +119,47 @@ function updateScoreElement() {
 document.querySelector('.GameScores').innerHTML = `Wins: ${scoreBoard.Wins},Losses: ${scoreBoard.Losses}, Ties: ${scoreBoard.Ties}`;
 };
 
+function sureityElement() {
+    document.querySelector('.div1').innerHTML = `Are you sure you want to reset the score?
+    <button class="b88 yes-btn">
+        Yes
+    </button>
+    <button class="b66 no-btn">
+        No
+    </button>`;
+
+    document.querySelector('.yes-btn').addEventListener('click', () => {
+        scoreBoard.Wins = 0;
+        scoreBoard.Losses = 0;
+        scoreBoard.Ties = 0;
+        localStorage.removeItem('ScoreBoard');
+        updateScoreElement();
+        document.querySelector('.div1').innerHTML = '';
+    });
+    
+    document.querySelector('.no-btn').addEventListener('click', () => {
+        document.querySelector('.div1').innerHTML = '';
+    });
+};
+
 document.querySelector('.reset-btn').addEventListener('click', () => {
-    scoreBoard.Wins = 0;
-    scoreBoard.Losses = 0;
-    scoreBoard.Ties = 0;
-    localStorage.removeItem('ScoreBoard');
-    updateScoreElement();
+    sureityElement();
 });
 
 document.querySelector('.autoplay-btn').addEventListener('click', () => {
     autoPlay();
+});
+
+document.body.addEventListener('keydown', (event) => {
+    if (event.key === 'r') {
+        playGame('Rock');
+    } else if (event.key === 'p') {
+        playGame('Paper');
+    } else if (event.key === 's') {
+        playGame('Scissors');
+    } else if (event.key === 'a') {
+        autoPlay();
+    } else if (event.key === 'Backspace') {
+        sureityElement();
+    }
 });

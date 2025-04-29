@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="b1" onclick="clickButton();">
+    <button class="b1">
         Add to cart
     </button>
 
@@ -22,11 +22,15 @@
 
                 clearTimeout(intervalId);
                 
-                intervalId = setTimeout(function() {
+                intervalId = setTimeout(() => {
                 textInside.innerHTML = '';
                 }, 2000);
             
         };
+
+        document.querySelector('.b1').addEventListener('click', () => {
+            clickButton();
+        });
     </script>
 </body>
 </html>

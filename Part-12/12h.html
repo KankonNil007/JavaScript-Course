@@ -6,17 +6,17 @@
     <title>App</title>
 </head>
 <body>
-    <button class="b1" onclick="num2++;">
+    <button class="b1">
         Add
     </button>
 
-    <button class="b2" onclick="num2--;">
+    <button class="b2">
         Remove
     </button>
 
     <script>
             let num2 = 2;
-            intervalId = setInterval(function() {
+            intervalId = setInterval(() => {
             if (document.title === 'App') {
                 document.title = `(${num2}) New Messages`;
             } else {
@@ -24,6 +24,14 @@
             }
             
         }, 1000);
+
+        document.querySelector('.b1').addEventListener('click', () => {
+            num2++;
+        });
+
+        document.querySelector('.b2').addEventListener('click', () => {
+            num2--;
+        });
     </script>
 </body>
 </html>

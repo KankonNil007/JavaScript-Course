@@ -3,29 +3,34 @@ const myArray = [];
 function renderTodoList() {
     let TodoHTML = '';
 
-myArray.forEach(function(element, index) {
-    const name = element.name;
-    const dueDate = element.dueDate;
-    const html = `
-    <div>
-       ${name}
-    </div>
-    
-    <div>
-        ${dueDate}
-    </div>
+    myArray.forEach((element, index) => {
+        const name = element.name;
+        const dueDate = element.dueDate;
+        const html = `
+        <div>
+        ${name}
+        </div>
         
-    <button class="b2" onclick="
-        myArray.splice(${index}, 1);
-        renderTodoList();
-    ">
-        Delete
-    </button>
-        `
-    TodoHTML += html;
-});
+        <div>
+            ${dueDate}
+        </div>
+            
+        <button class="b2 del-btn">
+            Delete
+        </button>
+            `
+        TodoHTML += html;
+    });
 
     document.querySelector('.d1').innerHTML = TodoHTML;
+
+    document.querySelectorAll('.del-btn').forEach((deleteButton, index) => {
+        deleteButton.addEventListener('click', () => {
+            myArray.splice(index, 1);
+            renderTodoList();
+        }
+        )
+    });
 }
 
 function toDoList() {
@@ -46,8 +51,6 @@ function toDoList() {
     renderTodoList();
 };
 
-function keyEvent(event) {
-    if (event.key === 'Enter') {
-        toDoList();
-    }
-}
+document.querySelector('.add-btn').addEventListener('click', () => {
+    toDoList();
+});

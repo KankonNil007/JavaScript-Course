@@ -6,16 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="b1" onclick="clickButton();">
+    <button class="b1">
         Start
     </button>
 
     <script>
         function clickButton() {
-            setTimeout(function() {
+            setTimeout(() => {
                 document.querySelector('.b1').innerHTML = 'Finished!';
             }, 1000);
         };
+
+        document.querySelector('.b1').addEventListener('click', () => {
+            clickButton();
+        });
     </script>
 </body>
 </html>

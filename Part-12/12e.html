@@ -18,10 +18,14 @@
 
             textInside.innerHTML = 'Added';
 
-            setTimeout(function() {
+            setTimeout(() => {
                 textInside.innerHTML = '';
             }, 2000);
         };
+
+        document.querySelector('.b1').addEventListener('click', () => {
+            clickButton();
+        });
     </script>
 </body>
 </html>
