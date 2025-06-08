@@ -10,7 +10,7 @@
   This repo contains all my code, practice files, notes, and mini-projects based on the
   <strong>JavaScript Full Course by SuperSimpleDev</strong> on YouTube.</p>
 
-  <p>🎥 <a href="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6PrE9srvEn8nbhOOyxnWXfp" target="_blank">
+  <p>🎥 <a href="https://youtu.be/EerdGm-ehJQ" target="_blank">
     Watch the Course Playlist</a>
   </p>
 
